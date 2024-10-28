@@ -27,7 +27,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   child: Image.asset('images/logo.png'),
                 ),
                 const Text(
-                  'speed Chat',
+                  'Flash Chat',
                   style: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
