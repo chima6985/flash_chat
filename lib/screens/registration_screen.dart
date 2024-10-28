@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
-  final String id = 'registration_screen';
+  static String id = 'registration_screen';
 
   @override
   // ignore: library_private_types_in_public_api
@@ -29,7 +29,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+                // Do something with the user input.
               },
               decoration: const InputDecoration(
                 hintText: 'Enter your email',
