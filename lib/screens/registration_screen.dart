@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
-  static String id = 'registration_screen';
+  static const  String id = 'registration_screen';
 
   @override
   // ignore: library_private_types_in_public_api
