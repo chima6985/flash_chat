@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(
-              height: 10.0,
+              height: 8.0,
             ),
             TextField(
               style: const TextStyle(color: Colors.black),
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 //Do something with the user input.
               },
               decoration: const InputDecoration(
-                hintText: 'Enter your password.',
+                hintText: 'Enter your passcode.',
                 contentPadding:
                     EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
