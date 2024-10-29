@@ -20,14 +20,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              height: 200.0,
-              child: Image.asset('images/logo.png'),
+            Hero(
+              tag: 'logo',
+              child: Container(
+                height: 200.0,
+                child: Image.asset('images/logo.png'),
+              ),
             ),
             const SizedBox(
               height: 48.0,
             ),
             TextField(
+              style: const  TextStyle(color: Colors.black),
               onChanged: (value) {
                 // Do something with the user input.
               },
@@ -52,6 +56,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 8.0,
             ),
             TextField(
+              style: const TextStyle(color: Colors.black),
               onChanged: (value) {
                 //Do something with the user input.
               },
