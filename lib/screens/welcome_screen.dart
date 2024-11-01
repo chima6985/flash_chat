@@ -21,11 +21,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(days: 1),
+      duration: const Duration(seconds: 1),
     );
 
     animation = ColorTween(begin: Colors.red, end: Colors.blue).animate(controller);
-     controller.forward();
+     controller.reverse(from: 1.0);
   
     controller.addListener(() {
       setState(() {});
