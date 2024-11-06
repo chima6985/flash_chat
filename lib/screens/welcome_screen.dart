@@ -21,10 +21,10 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 1),
+      duration: const Duration(seconds: 2),
     );
 
-    animation = ColorTween(begin: Colors.red, end: Colors.blue).animate(controller);
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
      controller.forward();
   
     controller.addListener(() {
@@ -54,7 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   tag: 'logo',
                   child: Container(
                     height: 60,
-                    child: Image.asset('images/logo.png'),
+                    child: Image.asset('images/logo.png'),  
                   ),
                 ),
                 const Text(
