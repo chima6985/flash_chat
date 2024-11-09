@@ -97,7 +97,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   onPressed: () {
                     Navigator.pushNamed(context, RegistrationScreen.id);
                   },
-                  minWidth: 200.0,
+                  minWidth: 200.0,  
                   height: 42.0,
                   child: const Text(
                     'Register',
