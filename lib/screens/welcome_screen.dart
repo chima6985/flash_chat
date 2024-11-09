@@ -14,34 +14,34 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
-  // late Animation animation;
-  // late AnimationController controller;
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   controller = AnimationController(
-  //     vsync: this,
-  //     duration: const Duration(seconds: 2),
-  //   );
+  late Animation animation;
+  late AnimationController controller;
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
 
-  //   animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
-  //    controller.forward();
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
+     controller.forward();
   
-  //   controller.addListener(() {
-  //     setState(() {});
-  //     log(animation.value.toString());
-  //   });
-  // }
-  // @override
-  // void dispose() {
-  //   controller.dispose();
-  //   super.dispose();
-  // }
+    controller.addListener(() {
+      setState(() {});
+      log(animation.value.toString());
+    });
+  }
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: animation.value,
+      backgroundColor: animation.value,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
