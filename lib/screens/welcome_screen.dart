@@ -58,7 +58,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   ),
                 ),
                 const Text(
-                  'Flash Chat',
+                  'Flash',
                   style: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
