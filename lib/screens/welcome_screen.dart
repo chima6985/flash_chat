@@ -3,6 +3,7 @@ import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flash_chat/componenets/rouded_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -67,17 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   ),
                 ),
 
-                // AnimatedTextKit(
-                //   animatedTexts: [
-                //     TypewriterAnimatedText(
-                //       'Flash Chat',
-                //       textStyle: const TextStyle(
-                //         fontSize: 45.0,
-                //         fontWeight: FontWeight.w900,
-                //       ),
-                //     ),
-                //   ],
-                // )
+           
               ],
             ),
             const SizedBox(
@@ -102,33 +93,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   }
 }
 
-class RoundedButton extends StatelessWidget {
-  const RoundedButton(
-      {super.key, this.colour, this.title, required this.onPressed});
-  final Color? colour;
-  final String? title;
-  final VoidCallback onPressed;
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16.0),
-      child: Material(
-        elevation: 5.0,
-        color: colour,
-        borderRadius: BorderRadius.circular(30.0),
-        child: MaterialButton(
-          onPressed: onPressed,
-          minWidth: 200.0,
-          height: 42.0,
-          child: Text(
-            title!,
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 
 
@@ -147,3 +112,15 @@ class RoundedButton extends StatelessWidget {
     //   controller.forward();
     // }
     // });
+
+         // AnimatedTextKit(
+                //   animatedTexts: [
+                //     TypewriterAnimatedText(
+                //       'Flash Chat',
+                //       textStyle: const TextStyle(
+                //         fontSize: 45.0,
+                //         fontWeight: FontWeight.w900,
+                //       ),
+                //     ),
+                //   ],
+                // )
