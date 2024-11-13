@@ -31,7 +31,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
     controller.addListener(() {
       setState(() {});
-      log(animation.value.toString());
     });
   }
 
@@ -60,67 +59,71 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     child: Image.asset('images/logo.png'),
                   ),
                 ),
-                //     WavyAnimatedTextKit(
-                //  text: ['Flash Chat'],
-                //     textStyle: TextStyle(
-                //       fontSize: 45.0,
-                //       fontWeight: FontWeight.w900,
-                //     ),
-                //   ),
+                WavyAnimatedTextKit(
+                  text: ['Flash  Chat'],
+                  textStyle: const TextStyle(
+                    fontSize: 45.0,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
 
-                AnimatedTextKit(
-                  animatedTexts: [
-                    TyperAnimatedText(
-                      'Flash Chat',
-                      textStyle: const TextStyle(
-                        fontSize: 45.0,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                  ],
-                )
+                // AnimatedTextKit(
+                //   animatedTexts: [
+                //     TypewriterAnimatedText(
+                //       'Flash Chat',
+                //       textStyle: const TextStyle(
+                //         fontSize: 45.0,
+                //         fontWeight: FontWeight.w900,
+                //       ),
+                //     ),
+                //   ],
+                // )
               ],
             ),
             const SizedBox(
               height: 48.0,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                elevation: 5.0,
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.circular(30.0),
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, LoginScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: const Text(
-                    'Log In',
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.circular(30.0),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RegistrationScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: const Text(
-                    'Register',
-                  ),
-                ),
-              ),
-            ),
+            RoundedButton(
+                title: 'log in',
+                colour: Colors.lightBlueAccent,
+                onPressed: () {
+                  Navigator.pushNamed(context, LoginScreen.id);
+                }),
+            RoundedButton(
+                title: 'Register',
+                colour: Colors.blue,
+                onPressed: () {
+                   Navigator.pushNamed(context, RegistrationScreen.id);
+                }),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class RoundedButton extends StatelessWidget {
+  const RoundedButton(
+      {super.key, this.colour, this.title, required this.onPressed});
+  final Color? colour;
+  final String? title;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
+      child: Material(
+        elevation: 5.0,
+        color: colour,
+        borderRadius: BorderRadius.circular(30.0),
+        child: MaterialButton(
+          onPressed: onPressed,
+          minWidth: 200.0,
+          height: 42.0,
+          child: Text(
+            title!,
+          ),
         ),
       ),
     );
