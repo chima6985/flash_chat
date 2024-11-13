@@ -25,14 +25,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       duration: const Duration(seconds: 2),
     );
 
-    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
-     controller.forward();
-  
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(controller);
+    controller.forward();
+
     controller.addListener(() {
       setState(() {});
       log(animation.value.toString());
     });
   }
+
   @override
   void dispose() {
     controller.dispose();
@@ -55,16 +57,28 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   tag: 'logo',
                   child: Container(
                     height: 60,
-                    child: Image.asset('images/logo.png'),  
+                    child: Image.asset('images/logo.png'),
                   ),
                 ),
-                  WavyAnimatedTextKit(
-               text: ['Flash Chat'],
-                  textStyle: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
+                //     WavyAnimatedTextKit(
+                //  text: ['Flash Chat'],
+                //     textStyle: TextStyle(
+                //       fontSize: 45.0,
+                //       fontWeight: FontWeight.w900,
+                //     ),
+                //   ),
+
+                AnimatedTextKit(
+                  animatedTexts: [
+                    TyperAnimatedText(
+                      'Flash Chat',
+                      textStyle: const TextStyle(
+                        fontSize: 45.0,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
             const SizedBox(
@@ -98,7 +112,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   onPressed: () {
                     Navigator.pushNamed(context, RegistrationScreen.id);
                   },
-                  minWidth: 200.0,  
+                  minWidth: 200.0,
                   height: 42.0,
                   child: const Text(
                     'Register',
