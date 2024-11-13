@@ -1,7 +1,6 @@
 import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
-import 'dart:developer';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flash_chat/componenets/rouded_button.dart';
 
@@ -34,13 +33,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       setState(() {});
     });
   }
-
   @override
   void dispose() {
     controller.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,8 +64,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     fontWeight: FontWeight.w900,
                   ),
                 ),
-
-           
               ],
             ),
             const SizedBox(

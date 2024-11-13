@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flash_chat/componenets/rouded_button.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -80,25 +81,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 24.0,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.blueAccent,
-                borderRadius: const BorderRadius.all(Radius.circular(30.0)),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    //Implement registration functionality.
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: const Text(
-                    'Register',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-            ),
+            RoundedButton(colour: Colors.blueAccent,title: 'Register',onPressed: (){},)
           ],
         ),
       ),
