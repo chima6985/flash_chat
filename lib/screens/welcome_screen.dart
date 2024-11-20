@@ -33,13 +33,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       setState(() {});
     });
   }
-
   @override
   void dispose() {
     controller.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +60,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 WavyAnimatedTextKit(
                   text: ['Flash Chat'],
                   textStyle: const TextStyle(
-                    fontSize: 60,
+                    fontSize: 45.0,
                     fontWeight: FontWeight.w900,
                   ),
                 ),
@@ -81,7 +79,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 title: 'Register',
                 colour: Colors.blue,
                 onPressed: () {
-                  Navigator.pushNamed(context, RegistrationScreen.id);
+                   Navigator.pushNamed(context, RegistrationScreen.id);
                 }),
           ],
         ),
