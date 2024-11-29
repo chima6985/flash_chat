@@ -33,11 +33,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       setState(() {});
     });
   }
+
   @override
   void dispose() {
     controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +69,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               ],
             ),
             const SizedBox(
-              height: 48.0,
+              height: 100.0,
             ),
             RoundedButton(
                 title: 'log in',
@@ -79,7 +81,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 title: 'Register',
                 colour: Colors.blue,
                 onPressed: () {
-                   Navigator.pushNamed(context, RegistrationScreen.id);
+                  Navigator.pushNamed(context, RegistrationScreen.id);
                 }),
           ],
         ),
