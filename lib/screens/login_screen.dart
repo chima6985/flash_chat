@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(
-              height: 24.0,
+              height: 30.0,
             ),
             RoundedButton(
                 onPressed: () {},
