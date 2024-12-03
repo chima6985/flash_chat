@@ -6,13 +6,12 @@ import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
 import 'dart:developer';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   log('firebase initalized successfully');
- runApp(const FlashChat());
+  runApp(const FlashChat());
 }
-
 
 class FlashChat extends StatelessWidget {
   const FlashChat({super.key});
@@ -23,7 +22,7 @@ class FlashChat extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         textTheme: const TextTheme(
-          bodyMedium: TextStyle(color: Colors.black54),
+          bodyMedium: TextStyle(color: Colors.white),
         ),
       ),
       initialRoute: WelcomeScreen.id,
