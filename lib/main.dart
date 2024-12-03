@@ -9,7 +9,7 @@ import 'dart:developer';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  log('firwbase initalized successfully');
+  log('firebase initalized successfully');
  runApp(const FlashChat());
 }
 
